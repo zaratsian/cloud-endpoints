@@ -1,0 +1,4 @@
+GCP_PROJECT_ID=globalgame
+GCP_REGION=us-central1
+
+CLOUD_RUN_NAME=api-backend
