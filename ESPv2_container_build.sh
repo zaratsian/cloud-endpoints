@@ -8,3 +8,4 @@ ENDPOINTS_CONFIG_ID=$(gcloud endpoints services list --format "value(serviceConf
 
 # Build ESPv2 Container Image
 ./gcloud_build_image -s $CLOUD_RUN_HOSTNAME -c $ENDPOINTS_CONFIG_ID -p $GCP_PROJECT_ID
+

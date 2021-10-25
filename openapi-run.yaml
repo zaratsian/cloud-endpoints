@@ -3,13 +3,13 @@ info:
   title: Cloud Endpoints
   description: Sample API on Cloud Endpoints with a Cloud Run backend
   version: 1.0.0
-host: CLOUD_RUN_HOSTNAME
+host: api-backend-cyj7y6zvsq-uc.a.run.app
 schemes:
   - https
 produces:
   - application/json
 x-google-backend:
-  address: CLOUD_RUN_URL
+  address: https://api-backend-cyj7y6zvsq-uc.a.run.app
   protocol: h2
 paths:
   /hello:
