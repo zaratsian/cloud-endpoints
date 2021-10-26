@@ -1,15 +1,15 @@
 swagger: '2.0'
 info:
-  title: Cloud Endpoints
+  title: Sample Cloud Endpoints
   description: Sample API on Cloud Endpoints with a Cloud Run backend
   version: 1.0.0
-host: CLOUD_RUN_HOSTNAME
+host: ENDPOINTS_CLOUD_RUN_HOSTNAME
 schemes:
   - https
 produces:
   - application/json
 x-google-backend:
-  address: CLOUD_RUN_URL
+  address: BACKEND_APP_URL
   protocol: h2
 paths:
   /hello:
