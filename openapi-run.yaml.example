@@ -12,12 +12,49 @@ x-google-backend:
   address: BACKEND_APP_URL
   protocol: h2
 paths:
+  /:
+    get:
+      summary: Hello response
+      operationId: hello
+      responses:
+        200:
+          description: Ok
+          schema:
+            type: string
   /hello:
     get:
       summary: Hello world response
-      operationId: hello
+      operationId: helloWorld
       responses:
-        '200':
-          description: A successful response
+        200:
+          description: Ok
           schema:
             type: string
+  /sample_post:
+    post:
+      summary: Sample Post
+      operationId: samplePost
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: payload
+          description: Sample payload to POST
+          schema:
+            type: object
+            required:
+              - username
+            properties:
+              username:
+                type: string
+              age:
+                type: number
+      responses:
+        200:
+          description: Ok
+          schema:
+            type: string
+        default:
+          description: Unexpected error

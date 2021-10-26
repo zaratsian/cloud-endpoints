@@ -6,11 +6,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def main():
-    return "Hello"
+    return "Hi"
 
 @app.route("/hello")
 def hello():
-    return "Hello World!"
+    return "Hello World Works!"
 
 @app.route("/sample_post", methods=["POST","GET"])
 def sample_post():
