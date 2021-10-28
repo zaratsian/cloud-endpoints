@@ -2,7 +2,7 @@
 . ./config
 
 gcloud run deploy $APP_CLOUD_RUN_NAME \
-    --source . \
+    --source ./app_python/. \
     --allow-unauthenticated \
     --platform managed \
     --region $APP_CLOUD_RUN_REGION \

@@ -17,6 +17,3 @@ sed -i "s@ENDPOINTS_CLOUD_RUN_HOSTNAME@$ENDPOINTS_CLOUD_RUN_HOSTNAME@" openapi-r
 # Deploy Google Endpoints Service
 gcloud endpoints services deploy openapi-run.yaml \
     --project $GCP_PROJECT_ID
-
-# Cleanup file - remove openapi-run.yaml
-#rm openapi-run.yaml

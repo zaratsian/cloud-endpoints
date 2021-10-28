@@ -6,11 +6,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def main():
-    return "Hi"
+    return "It works."
 
 @app.route("/hello")
 def hello():
-    return "Hello World Works!"
+    return "Hello World!"
 
 @app.route("/sample_post", methods=["POST","GET"])
 def sample_post():
@@ -18,7 +18,7 @@ def sample_post():
         #request_form = request.form['attribute']
         requests_json = request.get_json()
         
-        msg = f"Payload received: {requests_json}"
+        msg = f"Payload received: {requests_json}\n"
         print(f'[ INFO ] {msg}')
         return msg
 
